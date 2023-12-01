@@ -1,25 +1,9 @@
-# VoxSmart console app
+# CLI Console app to load JSON data feed
 
-# Goals
-
-To solve EXERCISE 1.
-
-# EXERCISE 1
-
-Required output:
-1. Solution implementation for the coding exercise
-2. Document of doubts/questions and assumptions
-
-Exercise
-	Write a piece of code to extract financial entity names from the feed https://feeds.a.dj.com/rss/RSSMarketsMain.xml
-
-Goals
-- We’re looking for a simple solution of the quality you’d expect to deliver as a solution.
-- There’s no need for a user interface, there should be enough testing to see that this works.
-- We’re not expecting you to take more than 90 minutes to complete the task in a programming language of your choice.
-- Have fun!
+A CLI console app to extract financial entity names from the feed https://feeds.a.dj.com/rss/RSSMarketsMain.xml
 
 # Assumptions:
+
 While exact URL was given to me, I assume future improvements and extensions of this method/classes, thus I had to apply several best practices:
 1. Implement general logic of downloading and parsing in separate assembly (Common) to be shared among its "users"
 2. Every class is following SRP principle
@@ -29,9 +13,8 @@ While exact URL was given to me, I assume future improvements and extensions of 
 Room for improvement:
 - There are still room for improvement in separating Mapping logic between 3rd-party and our Entity Domain. I didn't do it due to time limits.
 - Some tests (Console Output Handlers and Feed Integration Manager tests) are Integration tests, not Unit tests.
-  This is bad, due to external dependencies on service availability and speed of execution. There are number of ways how to solve it, but it really depends on the actual goal.
-  So I leave it like this for now.
-- The output of this application is just a number of fin entities found and a list of its Titles. I didn't do much formatting or showing "Everything" because I do not know the actual purpose of this data.
+  This is bad, due to external dependencies on service availability and speed of execution. There are number of ways how to solve it, but it really depends on the actual goal. So I leave it like this for now.
+- The output of this application is just a number of fin entities found and a list of its Titles, not all of them. The output depends on the requirements.
 
 # Prerequisites
 
